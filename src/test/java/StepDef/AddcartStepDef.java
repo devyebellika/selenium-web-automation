@@ -24,6 +24,12 @@ public class AddcartStepDef {
         driver.get("https://www.elevenia.co.id/");
     }
 
+    @When("I close banner")
+    public void iCloseBanner() {
+        driver.findElement(By.className("closeBtnMainPromo")).isDisplayed();
+        driver.findElement(By.className("closeBtnMainPromo")).click();
+    }
+
     @When("I search {string}")
     public void iSeach(String searchValue) throws InterruptedException {
         driver.findElement(By.id("AKCKwd")).sendKeys(searchValue, Keys.ENTER);

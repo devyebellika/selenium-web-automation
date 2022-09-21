@@ -5,7 +5,8 @@ Feature: Elevenia - Add to Cart
     And I open elevania homepage
 
   Scenario: I want to add and delete item in cart
-    When I search "komputer"
+    When I close banner
+    And I search "komputer"
     And I choose first product in Produk terlaris tab
     And I added to cart
     And I click Ubah Kurir button
